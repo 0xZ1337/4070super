@@ -1,0 +1,50 @@
+{
+  "_doc": [
+    "Profils d'overclock pour RTX 4070 SUPER sur pearlhash (calcul tensor cores, borné par le core, pas par la mémoire).",
+    "core_clock = verrou du core en MHz (le miner l'applique via NVML : admin sur Windows, root sur Linux).",
+    "mem_offset = offset mémoire ; pearlhash n'en profite pas, on baisse pour gratter des watts.",
+    "powerlimit = plafond en watts (TDP stock 4070 SUPER = 220 W).",
+    "pearlhash_kernel = 0 (auto) ou 2 (kernel plus économe sur 4060/4070 Super/Ti selon le changelog WildRig).",
+    "Les valeurs 'expected' sont des ordres de grandeur relevés publiquement (hashrate.no, GitHub), pas des promesses."
+  ],
+  "eco": {
+    "core_clock": 1905,
+    "core_offset": 0,
+    "mem_offset": -500,
+    "powerlimit": 165,
+    "fan": 65,
+    "pearlhash_kernel": 2,
+    "intensity": null,
+    "expected": "~100-108 TH/s @ ~155-165 W (~0.66 TH/s/W)"
+  },
+  "balanced": {
+    "core_clock": 2100,
+    "core_offset": 0,
+    "mem_offset": -500,
+    "powerlimit": 185,
+    "fan": 70,
+    "pearlhash_kernel": 2,
+    "intensity": null,
+    "expected": "~115-120 TH/s @ ~175-185 W"
+  },
+  "max": {
+    "core_clock": 2475,
+    "core_offset": 0,
+    "mem_offset": 0,
+    "powerlimit": 220,
+    "fan": 80,
+    "pearlhash_kernel": 0,
+    "intensity": null,
+    "expected": "~128-135 TH/s @ ~205-220 W"
+  },
+  "stock": {
+    "core_clock": 0,
+    "core_offset": 0,
+    "mem_offset": 0,
+    "powerlimit": 0,
+    "fan": 0,
+    "pearlhash_kernel": 0,
+    "intensity": null,
+    "expected": "réglages constructeur, référence pour comparer"
+  }
+}

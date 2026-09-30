@@ -1,0 +1,10 @@
+# Binaires des miners (téléchargés par install)
+miners/
+# Logs et résultats de bench
+logs/
+results/
+# Config perso (wallets) — ne jamais committer
+config/miner.env
+config/profiles.tuned.json
+__pycache__/
+*.pyc
